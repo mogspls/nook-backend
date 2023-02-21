@@ -1,0 +1,89 @@
+{
+  "kind": "collectionType",
+  "collectionName": "properties",
+  "info": {
+    "singularName": "property",
+    "pluralName": "properties",
+    "displayName": "Property",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    },
+    "Price": {
+      "type": "biginteger"
+    },
+    "Images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "SquareArea": {
+      "type": "integer"
+    },
+    "City": {
+      "type": "enumeration",
+      "enum": [
+        "makati",
+        "taguig",
+        "mandaluyong",
+        "pasig",
+        "san juan",
+        "quezon",
+        "manila",
+        "pasay",
+        "parañaque",
+        "las piñas",
+        "muntinlupa",
+        "laguna",
+        "tagaytay"
+      ]
+    },
+    "Term": {
+      "type": "enumeration",
+      "enum": [
+        "long",
+        "short",
+        "daily"
+      ]
+    },
+    "Updated": {
+      "type": "datetime"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "plugin::users-permissions.user",
+      "inversedBy": "properties"
+    },
+    "Bathroom": {
+      "type": "string"
+    },
+    "Features": {
+      "type": "component",
+      "repeatable": true,
+      "component": "amenity.amenities"
+    },
+    "longitude": {
+      "type": "string"
+    },
+    "latitude": {
+      "type": "string"
+    },
+    "uid": {
+      "type": "uid",
+      "targetField": "Title"
+    },
+    "Description": {
+      "type": "richtext"
+    }
+  }
+}

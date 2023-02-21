@@ -1,0 +1,20 @@
+{
+  "kind": "singleType",
+  "collectionName": "featured_properties",
+  "info": {
+    "singularName": "featured-property",
+    "pluralName": "featured-properties",
+    "displayName": "featured-property"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "properties": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::property.property"
+    }
+  }
+}
